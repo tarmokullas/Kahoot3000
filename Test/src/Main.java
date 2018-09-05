@@ -4,9 +4,8 @@
 public class Main {
 
 	public static void main(String[] args) {
-		
 		String nimi1 = "Tarmo";
-		String nimi2 = "liige 2"; //muutmiseks
+		String nimi2 = "Sergei"; //muutmiseks
 		String nimi3 = "liige 3"; //muutmiseks
 		
 		System.out.printf("Seda programmi on Giti abil muutnud %s, %s ja %s.", nimi1, nimi2, nimi3);
