@@ -1,0 +1,170 @@
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="image-container set-full-height"
+	style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvYQa7lzwPQOLipoXKOMxKttdqv06ae3AqXuHiH9vfN4R0Hq8W')">
+	<!------ Include the above in your HEAD tag ---------->
+
+	<!doctype html>
+	<html lang="en">
+<head>
+<meta charset="utf-8" />
+<!--     Fonts and icons     -->
+
+</head>
+
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<body>
+
+	<nav class="navbar navbar-default">
+
+		<div class="container">
+
+
+			<div class="collapse navbar-collapse" id="navbar-collapse-2">
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<li><a th:href="@{/}">StarBook</a></li>
+					<li><a th:href="@{/about}">About Us</a></li>
+					<li><a th:href="@{/offers/add}">Add offer</a></li>
+
+				</ul>
+			</div>
+
+		</div>
+
+
+	</nav>
+	<div class="content">
+		<div class="container">
+
+			
+				<div class="navbar navbar-default navbar-fixed-bottom">
+					<div class="container">
+
+						<p class="navbar-text pull-left">© 2018 StarBook project</p>
+
+					</div>
+
+				</div>
+				<div
+					class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb30 text-center">
+					<h1 style="color: white;">
+						<b>Leia pakkumisi igaks hooajaks</b>
+					</h1>
+				</div>
+			
+
+
+
+			
+
+
+				<h4 style="color: white;" class="tour-form-title">Otsing</h4>
+
+
+
+				<form class="go-bottom">
+
+					<h5 style="color: white;" class="left" for="name">Riik</h5>
+					<div class="select">
+						<select id="select" name="name" class="form-control" required>
+						
+							<option selected value="Eesti">Eesti</option>
+							<option>Saksamaa</option>
+							<option>Soome</option>
+							<option>Prantsusmaa</option>
+						</select>
+					</div>
+
+
+
+
+
+					<h5 style="color: white;" class="control-label" for="datepicker">Check
+						in</h5>
+					<div class="input-group">
+						<input id="datepicker" value="2017-06-01" name="datepicker" type="date"
+							placeholder="Date" class="form-control"> <span
+							class="input-group-addon"><i class="fa fa-calendar"></i></span>
+					</div>
+
+
+
+
+				</form>
+
+				<form class="go-right">
+
+
+
+					<h5 style="color: white;" class="left" for="county">Linn</h5>
+					<input id="country" type="text" placeholder="sisesta linn"
+						class="form-control">
+
+
+
+
+					<h5 style="color: white;" class="control-label" for="select">Check
+						out</h5>
+					<div class="input-group">
+						<input id="datepicker" value="2018-03-10" type="date" name="datepicker"
+							placeholder="Date" class="form-control"> <span
+							class="input-group-addon"><i class="fa fa-calendar"></i></span>
+
+
+					</div>
+
+					
+
+						
+				
+
+
+				</form>
+		<form>		
+<h5 style="color: white;">Numbers of bed:</h5>
+						<select class="form-control" id="valime">
+
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+						</select>
+</form>
+
+<form>
+				<div>
+					<a th:href="@{/offers}" class="btn btn-lg btn-primary">Otsi<i
+						class="fas fa-arrow-circle-down"></i></a>
+
+				</div>
+				
+
+<form>	
+			
+
+
+
+
+		</div>
+		
+
+	</div>
+	<b style="color: white;">SERGEI EENSALU</b>
+
+
+
+</body>
+
+</html>
+</div>
