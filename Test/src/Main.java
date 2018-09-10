@@ -9,7 +9,7 @@ public class Main {
 		String nimi3 = "liige 3"; //muutmiseks
 		
 		System.out.printf("Seda programmi on Giti abil muutnud %s, %s ja %s.", nimi1, nimi2, nimi3);
-
+		
 	}
 
 }
