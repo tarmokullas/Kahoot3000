@@ -1,0 +1,22 @@
+nav {
+	background-color: none;
+	list-style-type: none;
+}
+
+
+.login-column {
+	float: left;
+	width: 50%;
+}
+
+.question-column {
+	float: left;
+	width: 50%;
+}
+
+li[class="menu"] {
+	background-color: none;
+	display: inline;
+
+}
+

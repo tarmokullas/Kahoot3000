@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QuestionMark</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+
+<!-- Päis -->
+	<nav>
+		<li class="menu"><a href="join_game.html">Join Game</a></li>
+		<li class="menu"><a href="host_game.html">Host Game</a></li>
+		<li class="menu"><a href="about_us.html">About Us</a></li>
+	</nav>
+
+
+<!-- Sisu -->
+	<main>
+		<div">
+	  		<h3>Welco, %username%!</h3>
+	  		<div class="login-row">
+
+  				<div class="login-column">
+  					<h4>Games you have previously created</h4>
+  					<form>
+						<select size="10">
+  							<option value="#">%Game 1%</option>
+  							<option value="#">%Game 2%</option>
+  							<option value="#">%Game 3%</option>
+ 	 						<option value="#">%Game 4%</option>
+						</select><br>
+						<button><a href="game_creation_page.html">Edit</a></button>
+						<button><a href="waiting_room.html">Host</a></button>
+					</form>
+  				</div>
+
+  	<!-- Register -->
+  				<div class="login-column">
+  					<h4>Create a new game</h4>
+  					<form>
+						<input type="text" value="Name"><br>
+						<p>Number of guestions</p>
+						<input type="number"><br>
+						<button><a href="game_creation_page.html">Create</a></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>	
+
+
+</body>
+</html>
