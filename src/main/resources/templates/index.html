@@ -1,82 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>QuestionMark</title>
-	<meta charset="utf-8">
+    <title>QuestionMark</title>
+    <meta charset="utf-8">
 </head>
 <body>
 
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 <!-- Päis -->
-	<div class="tab">
-	  <button class="tablinks" onclick="openTab(event, 'Join Game')">Join Game</button>
-	  <button class="tablinks" onclick="openTab(event, 'Host Game')">Host Game</button>
-	  <button class="tablinks" onclick="openTab(event, 'About Us')">About Us</button>
-	</div>
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Join Game')">Join Game</button>
+    <button class="tablinks" onclick="openTab(event, 'Host Game')">Host Game</button>
+    <button class="tablinks" onclick="openTab(event, 'About Us')">About Us</button>
+</div>
 
 <!-- Sisu -->
 
-<!-- Join Game -->
-	<div id="Join Game" class="tabcontent">
-	  	<form>
-			<input align="centre" type="text" name="Game Code" value="Enter game code here..."><br>
-			<input type="submit" value="Join Game">
-		</form>
-	</div>
 
-<!-- Join Game -->
+<!-- Log In -->
+<div id="Host Game" class="tabcontent">
+    <h3 id="title">Join a game</h3>
+    <div class="row">
+        <div class="column">
+            <h4>Already have an account?</h4>
+            <form>
+                <input align="centre" type="text" name="username" value="Username"><br>
+                <input align="centre" type="password" name="password" value="Password"><br>
+                <input type="submit" value="Log 111In">
+            </form>
+        </div>
 
-	<!-- Log In -->
-	<div id="Host Game" class="tabcontent">
-	  <h3>You must be logged in to create and host games</h3>
-	  	<div class="row">
-  			<div class="column">
-  				<h4>Already have an account?</h4>
-  				<form>
-					<input align="centre" type="text" name="username" value="Username"><br>
-					<input align="centre" type="password" name="password" value="Password"><br>
-					<input type="submit" value="Log In">
-				</form>
-  			</div>
+        <!-- Join Game -->
+        <div id="label">
+            <form>
+                <label>Display Name</label>
+                <input value="Enter user name here..."><br>
+            </form>
+            <form>
+                <label>Game Pin</label>
+                <input value="Enter game pin here..."><br>
+            </form>
+        </div>
 
-  	<!-- Register -->
-  			<div class="column">
-  				<h4>Not registered yet?</h4>
-  				<form>
-					<input align="centre" type="text" name="username" value="Username"><br>
-					<input align="centre" type="password" name="password" value="Password"><br>
-					<input align="centre" type="password" name="confirmpassword" value="Confirm password"><br>
-					<input type="submit" value="Register">
-				</form></div>
-		</div>
-	</div>
+        <!-- Join Game -->
+
+
+        <!-- Register -->
+        <div class="column">
+            <h4>Not registered yet?</h4>
+            <form>
+                <input align="centre" type="text" name="username" value="Username"><br>
+                <input align="centre" type="password" name="password" value="Password"><br>
+                <input align="centre" type="password" name="confirmpassword" value="Confirm password"><br>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</div>
 
 <!-- About Us -->
-	<div id="About Us" class="tabcontent">
-	  <h3>Creators</h3>
-	  <p>
-	  	Tarmo Kullas<br>
-	  	Taavi Reisenbuk<br>
-	  	Sergei Eensalu
-	  </p>
-	</div>
+<div id="About Us" class="tabcontent">
+    <h3>Creators</h3>
+    <p>
+        Tarmo Kullas<br>
+        Taavi Reisenbuk<br>
+        Sergei Eensalu
+    </p>
+</div>
 
 <!-- Tab script -->
-	<script>
-	function openTab(evt, tabName) {
-    	var i, tabcontent, tablinks;
-    	tabcontent = document.getElementsByClassName("tabcontent");
-    	for (i = 0; i < tabcontent.length; i++) {
-        	tabcontent[i].style.display = "none";
-    		}
-    	tablinks = document.getElementsByClassName("tablinks");
-    	for (i = 0; i < tablinks.length; i++) {
-        	tablinks[i].className = tablinks[i].className.replace(" active", "");
-    		}
-    	document.getElementById(tabName).style.display = "block";
-    	evt.currentTarget.className += " active";
-		}
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
 </script>
 
+<div class="panel">
+    <a class="aboutUstext">
+        Tarmo Kullas<br>
+        Taavi Reisenbuk<br>
+        Sergei Eensalu
+    </a>
+</div>
 
 </body>
 </html>
