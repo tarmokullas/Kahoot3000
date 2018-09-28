@@ -1,6 +1,10 @@
 p {
-    color:blue;
+    color: white;
+    font-size: 20px;
 }
+
+
+
 @keyframes bgcolor {
 
     0% {
@@ -9,15 +13,11 @@ p {
 
     }
 
-
-
     30% {
 
         background-color: #66bf39
 
     }
-
-
 
     60% {
 
@@ -25,15 +25,11 @@ p {
 
     }
 
-
-
     90% {
 
         background-color: #f35
 
     }
-
-
 
     100% {
 
@@ -43,22 +39,20 @@ p {
 
 }
 
-
 #panel {
-    color: rgba(0,0,0, 0.54);
+    color: rgba(0, 0, 0, 0.54);
     padding-left: 27px;
 }
 
 #aboutUstext {
     padding-left: 27px;
-    margin: 0!important;
+    margin: 0 !important;
 }
 
 #container {
     width: 100px;
     margin: 0px auto;
 }
-
 
 body {
 
@@ -72,7 +66,7 @@ body {
 
 }
 
-#title{
+#title {
 
     font-family: 'Raleway', sans-serif;
 
@@ -84,7 +78,7 @@ body {
 
 }
 
-#name{
+#name {
 
     width: 50%;
 
@@ -110,7 +104,7 @@ body {
 
 }
 
-#pin{
+#pin {
 
     width: 50%;
 
@@ -136,7 +130,7 @@ body {
 
 }
 
-#label{
+#label {
 
     display: block;
 
@@ -150,7 +144,7 @@ body {
 
 }
 
-#host{
+#host {
 
     color: white;
 
@@ -158,46 +152,47 @@ body {
 
 }
 
-#host:hover{
+#host:hover {
 
-    text-decoration:underline;
+    text-decoration: underline;
 
 }
+
 /** Button Style **/
 #logInbutton {
     /** Font Style **/
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    text-transform:uppercase;
-    font-size:14px;
-    color:#fff;
-    text-decoration:none;
-    font-weight:bold;
-    text-transform:uppercase;
-    text-shadow:rgba(0, 0, 0, 0.30) 0 -1.25px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.30) 0 -1.25px 0;
 
     /** Button Style **/
-    display:-moz-inline-stack;
-    -webkit-font-smoothing:antialiased;
-    display:inline-block;
-    vertical-align:middle;
-    vertical-align:auto;
-    zoom:1;
+    display: -moz-inline-stack;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: auto;
+    zoom: 1;
     margin-top: 10px;
     margin-bottom: 10px;
-    border:1px solid #13619f;
+    border: 1px solid #13619f;
     background: #2371b7;
-    padding:11px 20px;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
-    -ms-border-radius:3px;
-    -o-border-radius:3px;
-    border-radius:3px;
-    -webkit-box-shadow:rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
-    -moz-box-shadow:rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
-    box-shadow:rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+    padding: 11px 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+    box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
 }
 
-#joinButton{
+#joinButton {
 
     width: 50%;
 
@@ -262,27 +257,28 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #FF007F;
+    background-color: #ff3355;
 }
 
 li {
     float: left;
-    background-color: #FF007F;
+    background-color: #ff3355;
 
 }
 
 li a {
     display: block;
-    color: blue;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background: #ff3355;
 }
 
 li a:hover {
-    background-color: #FF007F;
+    background-color: indianred;
 }
 
 .active {
-    background-color: #FF007F;
+    background-color: indianred;
 }
