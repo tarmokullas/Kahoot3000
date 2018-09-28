@@ -3,15 +3,16 @@
 <head>
     <title>QuestionMark</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
 
-<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+
 <!-- Päis -->
 <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'Join Game')">Join Game</button>
-    <button class="tablinks" onclick="openTab(event, 'Host Game')">Host Game</button>
-    <button class="tablinks" onclick="openTab(event, 'About Us')">About Us</button>
+    <li><a th:href="@{/joingame}">Join Game</a></li>
+    <li><a th:href="@{/hostgame}">Host Game</a></li>
+    <li><a th:href="@{/aboutus}">About Us</a></li>
 </div>
 
 <!-- Sisu -->

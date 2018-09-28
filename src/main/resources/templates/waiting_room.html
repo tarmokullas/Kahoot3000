@@ -3,22 +3,22 @@
 <head>
 	<title>QuestionMark</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 
 <body>
 
 <!-- Päis -->
-	<nav>
-		<li class="menu"><a href="join_game.html">Join Game</a></li>
-		<li class="menu"><a href="host_game.html">Host Game</a></li>
-		<li class="menu"><a href="about_us.html">About Us</a></li>
-	</nav>
+<div class="tab">
+	<li><a th:href="@{/joingame}">Join Game</a></li>
+	<li><a th:href="@{/hostgame}">Host Game</a></li>
+	<li><a th:href="@{/aboutus}">About Us</a></li>
+</div>
 
 
 <!-- Sisu -->
 	<main>
-		<div">
+		<div>
 	  		<h3>Waiting for players to join</h3>
 	  		<div class="login-row">
 

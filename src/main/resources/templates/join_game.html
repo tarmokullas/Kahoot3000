@@ -1,30 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>QuestionMark</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
-
 <body>
 
 <!-- Päis -->
-	<nav>
-		<li class="menu"><a href="join_game.html">Join Game</a></li>
-		<li class="menu"><a href="host_game.html">Host Game</a></li>
-		<li class="menu"><a href="about_us.html">About Us</a></li>
-	</nav>
-
+<div class="tab">
+	<li><a th:href="@{/joingame}">Join Game</a></li>
+	<li><a th:href="@{/hostgame}">Host Game</a></li>
+	<li><a th:href="@{/aboutus}">About Us</a></li>
+</div>
 
 <!-- Sisu -->
-	<main>
-		<form>
-			<input type="text" value="Enter game code here...">
-			<button><a href="game_loading_page.html">Join Game</a></button>
-		</form>
 
-	</main>	
 
+<!-- Log In -->
+<div id="Host Game" class="tabcontent">
+	<h3 id="title">Join a game</h3>
+	<div class="row">
+		<div class="column">
+			<h4>Already have an account?</h4>
+			<form>
+				<input align="centre" type="text" name="username" value="Username"><br>
+				<input align="centre" type="password" name="password" value="Password"><br>
+				<input type="submit" value="Log 111In">
+			</form>
+		</div>
+
+		<!-- Join Game -->
+		<div id="label">
+			<form>
+				<label>Display Name</label>
+				<input value="Enter user name here..."><br>
+			</form>
+			<form>
+				<label>Game Pin</label>
+				<input value="Enter game pin here..."><br>
+			</form>
+		</div>
+
+		<!-- Join Game -->
+
+
+		<!-- Register -->
+		<div class="column">
+			<h4>Not registered yet?</h4>
+			<form>
+				<input align="centre" type="text" name="username" value="Username"><br>
+				<input align="centre" type="password" name="password" value="Password"><br>
+				<input align="centre" type="password" name="confirmpassword" value="Confirm password"><br>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- About Us -->
+<div id="About Us" class="tabcontent">
+	<h3>Creators</h3>
+	<p>
+		Tarmo Kullas<br>
+		Taavi Reisenbuk<br>
+		Sergei Eensalu
+	</p>
+</div>
+
+<!-- Tab script -->
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+<div class="panel">
+	<a class="aboutUstext">
+		Tarmo Kullas<br>
+		Taavi Reisenbuk<br>
+		Sergei Eensalu
+	</a>
+</div>
 
 </body>
 </html>
