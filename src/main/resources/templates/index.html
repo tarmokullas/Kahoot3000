@@ -10,47 +10,50 @@
 
 
 <!-- Päis -->
-
-<ul>
-    <li><a th:href="@{/joingame}">Join Game</a></li>
-    <li><a th:href="@{/hostgame}">Host Game</a></li>
-    <li> <a th:href="@{/aboutus}">About Us</a></li>
-</ul>
-
+<div class="header">
+    <h2>QuestionMark</h2>
+    <ul class="header-list">
+        <li><a th:href="@{/joingame}">Join Game</a></li>
+        <li><a th:href="@{/hostgame}">Host Game</a></li>
+        <li> <a th:href="@{/aboutus}">About Us</a></li>
+    </ul>
+</div>
 
 
 <!-- Sisu -->
 
-
-<!-- Log In -->
-<div id="Host Game" class="tabcontent">
-    <h3 id="title">Join a game</h3>
-    <div class="row">
+<div class="pagecontent">
+    <!-- <div class="row">
         <div class="column">
             <h4>Already have an account?</h4>
             <form>
                 <input align="centre" type="text" name="username" value="Username"><br>
                 <input align="centre" type="password" name="password" value="Password"><br>
-                <input type="submit" value="Log 111In">
+                <input type="submit" value="Log In">
             </form>
-        </div>
+        </div> -->
 
         <!-- Join Game -->
-        <div id="label">
-            <form>
-                <label>Display Name</label>
-                <input value="Enter user name here..."><br>
-            </form>
-            <form>
-                <label>Game Pin</label>
-                <input value="Enter game pin here..."><br>
-            </form>
+    <div class="Aligner">
+        <div class="Aligner-item Aligner-item--top"></div>
+        <div class="Aligner-item">
+            <div class="join">
+                <h3 id="title">Join a game</h3>
+                <form>
+                    <input value="Display Name"><br>
+                </form>
+                <form>
+                    <input value="Game Pin"><br>
+                    <input type="submit" value="Join">
+                </form>
+            </div>
         </div>
+        <div class="Aligner-item Aligner-item--bottom"></div>
+    </div>
 
-        <!-- Join Game -->
+    <a th:href="@{/testdatabase}">Testi andmebaasi töötamist siit</a>
 
-
-        <!-- Register -->
+        <!-- Register
         <div class="column">
             <h4>Not registered yet?</h4>
             <form>
@@ -59,55 +62,8 @@
                 <input align="centre" type="password" name="confirmpassword" value="Confirm password"><br>
                 <input type="submit" value="Register">
             </form>
-        </div>
+        </div> -->
     </div>
 </div>
-
-<!-- About Us -->
-<div id="About Us" class="tabcontent">
-    <h3>Creators</h3>
-    <p>
-        Tarmo Kullas<br>
-        Taavi Reisenbuk<br>
-        Sergei Eensalu
-    </p>
-</div>
-
-<!-- Tab script -->
-<script>
-    function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-</script>
-
-<div class="panel">
-    <a class="aboutUstext">
-        Tarmo Kullas<br>
-        Taavi Reisenbuk<br>
-        Sergei Eensalu
-    </a>
-</div>
-
-
 </body>
-
-<div class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-
-        <p class="navbar-text pull-left">© 2018 StarBook project</p>
-
-    </div>
-
-</div>
-
 </html>
