@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>QuestionMark</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+
+<!-- Päis -->
+<ul>
+	<li><a th:href="@{/joingame}">Join Game</a></li>
+	<li><a th:href="@{/hostgame}">Host Game</a></li>
+	<li> <a th:href="@{/aboutus}">About Us</a></li>
+</ul>
+
+
+
+<!-- Sisu -->
+	<main>
+	  	<h3>Congratulation, %player1%!</h3>
+	  	<form>
+			<select size="10">
+  				<option value="#">%Player 1  2000%</option>
+  				<option value="#">%Player 2  1000%</option>
+  				<option value="#">%Player 3  -500%</option>
+ 	 			<option value="#">%Player 4  -1000%</option>
+			</select>
+		</form>
+
+		<button><a href="user_page.html">Back to user page</a></button>
+	</main>	
+
+
+
+</body>
+</html>
