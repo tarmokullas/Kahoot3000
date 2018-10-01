@@ -1,243 +1,106 @@
 p {
     color: white;
-    font-size: 20px;
+    font-size: 1.5em;
+    font-family: Raleway;
 }
 
-
+h2, h3{
+    color: white;
+    font-family: Raleway;
+}
 
 @keyframes bgcolor {
 
     0% {
-
         background-color: #45a3e5
-
     }
-
-    30% {
-
+    25% {
         background-color: #66bf39
-
     }
-
-    60% {
-
+    50% {
         background-color: #eb670f
-
     }
-
-    90% {
-
+    75% {
         background-color: #f35
-
     }
-
     100% {
-
         background-color: #864cbf
-
     }
-
 }
 
-#panel {
-    color: rgba(0, 0, 0, 0.54);
-    padding-left: 27px;
+.header {
+    display: flex;
 }
 
-#aboutUstext {
-    padding-left: 27px;
-    margin: 0 !important;
+.join {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#container {
-    width: 100px;
-    margin: 0px auto;
+.join input {
+    width: 15em;
+    margin: 0.75em;
+    border-radius: 10px;
+}
+
+.Aligner {
+    margin-top: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Aligner-item {
+    max-width: 50%;
+}
+
+.Aligner-item--top {
+    align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+    align-self: flex-end;
+}
+
+.header-list {
+    flex-grow: 3;
+    list-style-type: none;
+    margin: 0.5em;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ff3355;
+    border-radius: 15px;
 }
 
 body {
-
-    -webkit-animation: bgcolor 20s infinite;
-
-    animation: bgcolor 10s infinite;
-
-    -webkit-animation-direction: alternate;
-
+    animation: bgcolor 30s infinite;
     animation-direction: alternate;
-
-}
-
-#title {
-
-    font-family: 'Raleway', sans-serif;
-
-    text-align: center;
-
-    font-size: 50px;
-
-    color: white;
-
-}
-
-#name {
-
-    width: 50%;
-
-    padding: 12px 0px;
-
-    margin: 8px 0;
-
-    display: block;
-
-    border: 1px solid #ccc;
-
-    border-radius: 4px;
-
-    box-sizing: border-box;
-
-    margin-right: auto;
-
-    margin-left: auto;
-
-    font-size: 20px;
-
-    text-align: center;
-
-}
-
-#pin {
-
-    width: 50%;
-
-    padding: 12px 0px;
-
-    margin: 8px 0;
-
-    display: block;
-
-    border: 1px solid #ccc;
-
-    border-radius: 4px;
-
-    box-sizing: border-box;
-
-    margin-right: auto;
-
-    margin-left: auto;
-
-    font-size: 20px;
-
-    text-align: center;
-
 }
 
 #label {
-
-    display: block;
-
-    text-align: center;
-
-    font-size: 25px;
-
     font-family: 'Raleway', sans-serif;
-
     color: white;
-
 }
 
 #host {
-
     color: white;
-
     text-decoration: none;
-
 }
 
 #host:hover {
-
     text-decoration: underline;
-
 }
 
-/** Button Style **/
-#logInbutton {
-    /** Font Style **/
+.button {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.5em;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
     text-shadow: rgba(0, 0, 0, 0.30) 0 -1.25px 0;
-
-    /** Button Style **/
-    display: -moz-inline-stack;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    vertical-align: middle;
-    vertical-align: auto;
-    zoom: 1;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #13619f;
-    background: #2371b7;
-    padding: 11px 20px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
-    -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
-    box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
-}
-
-#joinButton {
-
-    width: 50%;
-
-    background-color: #4CAF50;
-
-    color: white;
-
-    padding: 14px 20px;
-
-    margin: 8px 0;
-
-    border: none;
-
-    border-radius: 4px;
-
-    cursor: pointer;
-
-    display: block;
-
-    margin-right: auto;
-
-    margin-left: auto;
-
-    font-size: 20px;
-
-    background-color: #3A3B3A;
-
-    font-family: 'Raleway', sans-serif;
-
-}
-
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
 }
 
 /* Change the color of links on hover */
@@ -252,25 +115,15 @@ body {
     color: white;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #ff3355;
-}
-
 li {
-    float: left;
-    background-color: #ff3355;
-
+    float: right;
 }
 
 li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1.1em 0.75em;
     text-decoration: none;
     background: #ff3355;
 }
