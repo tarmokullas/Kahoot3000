@@ -42,6 +42,7 @@ public class TestDatabaseController {
         Properties props = new Properties();
         props.setProperty("user", "postgres");
         props.setProperty("password", "questionmark");
+        props.setProperty("sslmode", "disable");
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
@@ -60,6 +61,7 @@ public class TestDatabaseController {
         Properties props = new Properties();
         props.setProperty("user", "postgres");
         props.setProperty("password", "questionmark");
+        props.setProperty("sslmode", "disable");
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM users");
@@ -78,6 +80,7 @@ public class TestDatabaseController {
         Properties props = new Properties();
         props.setProperty("user", "postgres");
         props.setProperty("password", "questionmark");
+        props.setProperty("sslmode", "disable");
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT name, users.username FROM games JOIN users ON creator=users.id");
@@ -95,6 +98,7 @@ public class TestDatabaseController {
         Properties props = new Properties();
         props.setProperty("user", "postgres");
         props.setProperty("password", "questionmark");
+        props.setProperty("sslmode", "disable");
         String query = "INSERT INTO public.users(\n" +
                 "\tusername, password, salt)\n" +
                 "\tVALUES ('" + user.getUsername() + "','" + user.getPassword() + "','" + user.getSalt() + "');";
