@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>QuestionMark</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+
+<!-- Päis -->
+<ul>
+	<li><a th:href="@{/index}">Join Game</a></li>
+	<li><a th:href="@{/hostgame}">Host Game</a></li>
+	<li> <a th:href="@{/aboutus}">About Us</a></li>
+</ul>
+
+
+
+<!-- Sisu -->
+	<main>
+		<div>
+	  		<h3>Waiting for players to join</h3>
+	  		<div class="login-row">
+
+  				<div class="login-column">
+  					<h4>Curretntly joined</h4>
+
+  					<form>
+						<select size="10">
+  							<option value="#">%Player 1%</option>
+  							<option value="#">%Player 2%</option>
+  							<option value="#">%Player 3%</option>
+ 	 						<option value="#">%Player 4%</option>
+						</select>
+					</form>
+
+  				</div>
+
+  	<!-- Register -->
+  				<div class="login-column">
+  					<p>Your game code is:</p>
+  					<h4>INF2018</h4>
+  					<p>Ready to start?</p>
+  					<button><a href="active_game_hosting_page.html">Begin</a></button>
+				</div>
+			</div>
+		</div>
+	</main>	
+
+
+
+</body>
+</html>
