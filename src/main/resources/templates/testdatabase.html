@@ -6,13 +6,19 @@
 </head>
 <body>
     <h1>Insert new users here</h1>
-    <form action="#" th:action="@{/testdatabase}" th:object="${user}" method="post">
+    <form th:action="@{/testdatabase}" th:object="${userForm}" method="POST">
         <p>Username: <input type="text" th:field="*{username}"/></p>
         <p>Password: <input type="text" th:field="*{password}"></p>
         <p><input type="submit" value="Submit"/></p>
     </form>
 
-    <h2>Look at all the current users here</h2>
+    <h2>All the current users are right here</h2>
+        <div th:utext="${databaseuserdump}"></div>
 
+    <h2>And here we have games with their creators</h2>
+        <div th:utext="${databasegamedump}"></div>
+
+    <h2>Let's count how many users we have</h2>
+        <div th:utext="${usercount}"></div>
 </body>
 </html>

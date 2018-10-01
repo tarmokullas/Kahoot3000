@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style type="text/css">
+    h1 {
+        color: white;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    p {
+        color: white;
+        font-size: 15px;
+        text-align: right;
+    }
+
+
+    .brd {
+        border: 4px black;
+        margin: auto;
+        border-radius: 5px;
+        padding: 40px;
+        border-style: inset;
+        width: 50%;
+        margin-top:19px;
+    }
+
+</style>
+<head>
+    <title>QuestionMark</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+
+<ul>
+    <li><a th:href="@{/joingame}">Join Game</a></li>
+    <li><a th:href="@{/hostgame}">Host Game</a></li>
+    <li><a th:href="@{/aboutus}">About Us</a></li>
+</ul>
+
+<section>
+    <article>
+        <h1>QuestionMark</h1>
+
+        <div class="brd">
+            <p>QuestionMark on mäng, mis hõlbustab viktoriinide korraldamist, tehes seda netipõhises
+                keskkonnas.</p>
+            <p>Lihtsusele aitab kaasa see, et mängudega ühinemine registreerimist ei vaja.</p>
+            <p>Küll aga on seda vaja teha siis, kui on soovi ise küsimusi koostada ja mängu korraldada.</p>
+        </div>
+        <div class="brd">
+            <h3>Mis see on?</h3>
+            <p>Tegu on veebipõhise viktoriinikeskkonnaga, mille märksõnadeks on lihtsus, kasutajamugavus ja kiire ülesseadmine.</p>
+            <h3>Tehnoloogiad ja keeled</h3>
+            <p>HTML, CSS, JavaScript, Java, SpringBoot, SQL</p>
+            <h3>Meeskond ja tööjaotus</h3>
+            <p>Tarmo Kullas, Taavi Reisenbuk, Sergei Eensalu</p>
+
+
+        </div>
+    </article>
+</section>
+
+
+</body>
+</html>
