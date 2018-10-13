@@ -5,35 +5,24 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
+
+
 <body>
-
-
 
 <!-- Päis -->
 <div class="header">
     <h2>QuestionMark</h2>
     <ul class="header-list">
         <li><a th:href="@{/index}">Join Game</a></li>
-        <li><a th:href="@{/hostgame}">Host Game</a></li>
-        <li> <a th:href="@{/aboutus}">About Us</a></li>
+        <li><a th:href="@{/login}">Log in</a></li>
+        <li><a th:href="@{/register}">Register</a></li>
+        <li><a th:href="@{/aboutus}">About Us</a></li>
     </ul>
 </div>
 
-
 <!-- Sisu -->
-
 <div class="pagecontent">
-    <!-- <div class="row">
-        <div class="column">
-            <h4>Already have an account?</h4>
-            <form>
-                <input align="centre" type="text" name="username" value="Username"><br>
-                <input align="centre" type="password" name="password" value="Password"><br>
-                <input type="submit" value="Log In">
-            </form>
-        </div> -->
 
-        <!-- Join Game -->
     <div class="Aligner">
         <div class="Aligner-item Aligner-item--top"></div>
         <div class="Aligner-item">
@@ -49,21 +38,11 @@
             </div>
         </div>
         <div class="Aligner-item Aligner-item--bottom"></div>
-    </div>
 
+    </div>
     <a th:href="@{/testdatabase}">Testi andmebaasi töötamist siit</a>
 
-        <!-- Register
-        <div class="column">
-            <h4>Not registered yet?</h4>
-            <form>
-                <input align="centre" type="text" name="username" value="Username"><br>
-                <input align="centre" type="password" name="password" value="Password"><br>
-                <input align="centre" type="password" name="confirmpassword" value="Confirm password"><br>
-                <input type="submit" value="Register">
-            </form>
-        </div> -->
-    </div>
+</div>
 </div>
 </body>
 </html>

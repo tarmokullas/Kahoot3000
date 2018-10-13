@@ -11,6 +11,6 @@ public class AboutUsController {
 
     @RequestMapping(value = {"/aboutus"}, method = RequestMethod.GET)
     public String index(Model model) {
-        return "about_us";
+        return "aboutus";
     }
 }

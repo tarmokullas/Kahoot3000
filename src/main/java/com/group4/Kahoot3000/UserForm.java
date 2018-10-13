@@ -20,4 +20,5 @@ public class UserForm {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

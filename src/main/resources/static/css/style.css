@@ -135,3 +135,23 @@ li a:hover {
 .active {
     background-color: indianred;
 }
+
+.brd {
+    border: 4px black;
+    margin: auto;
+    border-radius: 5px;
+    padding: 40px;
+    border-style: inset;
+    width: 50%;
+    margin-top: 19px;
+}
+
+.column-left {
+    float: left;
+}
+
+.column-right {
+    float: right;
+}
+
+

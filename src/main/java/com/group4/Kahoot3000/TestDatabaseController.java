@@ -44,6 +44,7 @@ public class TestDatabaseController {
         props.setProperty("password", "questionmark");
         props.setProperty("sslmode", "disable");
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
+            //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
             while (resultSet.next()) {
@@ -63,6 +64,7 @@ public class TestDatabaseController {
         props.setProperty("password", "questionmark");
         props.setProperty("sslmode", "disable");
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
+            //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM users");
             while (resultSet.next()) {
@@ -82,6 +84,7 @@ public class TestDatabaseController {
         props.setProperty("password", "questionmark");
         props.setProperty("sslmode", "disable");
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
+            //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT name, users.username FROM games JOIN users ON creator=users.id");
             while (resultSet.next()) {
@@ -94,7 +97,7 @@ public class TestDatabaseController {
         return result;
     }
 
-    private static void addUsertoDatabase(User user) {
+    public static void addUsertoDatabase(User user) {
         Properties props = new Properties();
         props.setProperty("user", "postgres");
         props.setProperty("password", "questionmark");
@@ -103,6 +106,7 @@ public class TestDatabaseController {
                 "\tusername, password, salt)\n" +
                 "\tVALUES ('" + user.getUsername() + "','" + user.getPassword() + "','" + user.getSalt() + "');";
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
+             //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             statement.execute(query);
         } catch (SQLException e) {

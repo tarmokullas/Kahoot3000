@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Log in</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+
+
+<body>
+
+<!-- Päis -->
+<div class="header">
+    <h2>QuestionMark</h2>
+    <ul class="header-list">
+        <li><a th:href="@{/index}">Join Game</a></li>
+        <li><a th:href="@{/login}">Log in</a></li>
+        <li><a th:href="@{/register}">Register</a></li>
+        <li><a th:href="@{/aboutus}">About Us</a></li>
+    </ul>
+</div>
+
+<!-- Sisu -->
+<div class="pagecontent">
+
+    <div class="row">
+        <!-- Login -->
+        <div class="">
+            <h3>Already have an account?</h3>
+            <form th:action="@{/login}" th:object="${userForm}" method="POST">
+                <p>Username: <input type="text" th:field="*{username}"/></p>
+                <p>Password: <input type="password" th:field="*{password}"></p>
+                <input type="submit" value="Log in"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
