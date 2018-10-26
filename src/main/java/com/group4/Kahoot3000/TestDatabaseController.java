@@ -1,5 +1,6 @@
 package com.group4.Kahoot3000;
 
+
 import lombok.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,8 +44,8 @@ public class TestDatabaseController {
         props.setProperty("user", "postgres");
         props.setProperty("password", "questionmark");
         props.setProperty("sslmode", "disable");
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
-            //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
+        //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
+        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
             while (resultSet.next()) {
@@ -63,8 +64,8 @@ public class TestDatabaseController {
         props.setProperty("user", "postgres");
         props.setProperty("password", "questionmark");
         props.setProperty("sslmode", "disable");
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
-            //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
+        //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
+        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM users");
             while (resultSet.next()) {
@@ -83,8 +84,8 @@ public class TestDatabaseController {
         props.setProperty("user", "postgres");
         props.setProperty("password", "questionmark");
         props.setProperty("sslmode", "disable");
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
-            //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
+        //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
+        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT name, users.username FROM games JOIN users ON creator=users.id");
             while (resultSet.next()) {
@@ -105,8 +106,8 @@ public class TestDatabaseController {
         String query = "INSERT INTO public.users(\n" +
                 "\tusername, password, salt)\n" +
                 "\tVALUES ('" + user.getUsername() + "','" + user.getPassword() + "','" + user.getSalt() + "');";
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
-             //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
+        //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
+        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
             Statement statement = connection.createStatement();
             statement.execute(query);
         } catch (SQLException e) {

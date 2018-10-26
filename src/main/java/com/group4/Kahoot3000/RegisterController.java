@@ -18,6 +18,7 @@ public class RegisterController {
         return "register";
     }
 
+
     @RequestMapping(value = {"/register"}, method = RequestMethod.POST)
     public String registerSubmit(Model model, @ModelAttribute("registerForm") RegisterForm registerForm) {
 
