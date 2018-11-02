@@ -62,13 +62,13 @@ public class LoginController {
     }
 
     private static String getUserSalt() {
+
         String result = "";
         Properties props = new Properties();
         props.setProperty("user", "postgres");
         props.setProperty("password", "questionmark");
         props.setProperty("sslmode", "disable");
-        //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/qmark", props)) {
+        try (Connection connection = DriverManager.getConnection(TestDatabaseController.getAndmebaasString(), props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT username, salt FROM users");
             System.out.println("check:  "+ resultSet.toString());
