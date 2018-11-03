@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AuthenticationController {
@@ -51,10 +52,13 @@ public class AuthenticationController {
 
     @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
     public String getUserFormForLogin(Model model) {
-
         model.addAttribute("userForm", new UserForm());
-
         return "login";
+    //public ModelAndView loginPage() {
+    //    ModelAndView login = new ModelAndView();
+    //    login.setViewName("login");
+    //    login.addObject("userForm", new UserForm());
+    //    return login;
     }
 
     @RequestMapping(value = {"/login"}, method = RequestMethod.POST)
