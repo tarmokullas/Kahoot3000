@@ -1,19 +1,15 @@
 package com.group4.Kahoot3000;
 
 
-import lombok.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.InputStream;
-import java.net.URL;
 import java.sql.*;
 import java.util.Properties;
-import java.util.ResourceBundle;
 
 
 @Controller

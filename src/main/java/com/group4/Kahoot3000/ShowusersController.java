@@ -11,7 +11,7 @@ import java.util.List;
 public class ShowusersController {
 
     @Autowired
-    IUserService userService;
+    UserService userService;
 
     @RequestMapping("/showusers")
     public String showUsers(Model model) {
