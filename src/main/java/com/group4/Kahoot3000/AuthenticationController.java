@@ -39,7 +39,10 @@ public class AuthenticationController {
         if (!userService.doPasswordsMatch(userForm.getPassword(), userForm.getPasswordRepeat())) {
             return "redirect:/register?passworderror";
         }
-        System.out.println(userService.getAllUserNames());
+
+        if (userService.getAllUserNames().contains(userForm.getUsername())) {
+            return "redirect:/register?usernameerror";
+        }
         User userToRegister = new User(userForm.getUsername(), userForm.getPassword());
         userService.addUser(userToRegister);
 
@@ -54,22 +57,23 @@ public class AuthenticationController {
     public String getUserFormForLogin(Model model) {
         model.addAttribute("userForm", new UserForm());
         return "login";
-    //public ModelAndView loginPage() {
-    //    ModelAndView login = new ModelAndView();
-    //    login.setViewName("login");
-    //    login.addObject("userForm", new UserForm());
-    //    return login;
     }
 
     @RequestMapping(value = {"/login"}, method = RequestMethod.POST)
     public String loginSubmit(Model model, @ModelAttribute("userForm") UserForm userForm) {
 
-        User userToLogin = userService.findUserByUsername(userForm.getUsername());
-        if(userToLogin.confirmLogin(userForm.getPassword())) {
-            return "userpage";
+        try {
+            User userToLogin = userService.findUserByUsername(userForm.getUsername());
+            if (userToLogin.confirmLogin(userForm.getPassword())) {
+                return "userpage";
+            } else {
+                return "redirect:login?passworderror";
+            }
+
+        } catch (NullPointerException e) {
+            return "redirect:login?usernameerror";
         }
 
-        return "redirect:login";
     }
 
 
