@@ -4,6 +4,7 @@ public class UserForm {
 
     private String username;
     private String password;
+    private String passwordRepeat;
 
     public String getUsername() {
         return username;
@@ -19,6 +20,14 @@ public class UserForm {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getPasswordRepeat() {
+        return passwordRepeat;
+    }
+
+    public void setPasswordRepeat(String passwordRepeat) {
+        this.passwordRepeat = passwordRepeat;
     }
 
 }

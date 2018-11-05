@@ -4,44 +4,36 @@
     <title>About us</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
-</head>
-
-
+   </head>
 <body>
-
 <!-- Päis -->
 <div class="header">
     <h2>QuestionMark</h2>
-    <ul class="header-list">
-        <li><a th:href="@{/index}">Join Game</a></li>
-        <li><a th:href="@{/login}">Log in</a></li>
-        <li><a th:href="@{/register}">Register</a></li>
-        <li><a th:href="@{/aboutus}">About Us</a></li>
+    <ul id="header-list">
+        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
+        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
+        <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
+        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
     </ul>
 </div>
-
 <!-- Sisu -->
 <div class="pagecontent">
     <section>
         <article>
-            <div class="brd">
-                <p>QuestionMark on mäng, mis hõlbustab viktoriinide korraldamist, tehes seda netipõhises
-                    keskkonnas.</p>
-                <p>Lihtsusele aitab kaasa see, et mängudega ühinemine registreerimist ei vaja.</p>
-                <p>Küll aga on seda vaja teha siis, kui on soovi ise küsimusi koostada ja mängu korraldada.</p>
-            </div>
-            <div class="brd">
-                <h3>Mis see on?</h3>
-                <p>Tegu on veebipõhise viktoriinikeskkonnaga, mille märksõnadeks on lihtsus, kasutajamugavus ja kiire
-                    ülesseadmine.</p>
-                <h3>Tehnoloogiad ja keeled</h3>
-                <p>HTML, CSS, JavaScript, Java, SpringBoot, SQL</p>
-                <h3>Meeskond ja tööjaotus</h3>
-                <p>Tarmo Kullas, Taavi Reisenbuk, Sergei Eensalu</p>
-            </div>
+                <h3 th:text="#{about.whatis1}"></h3>
+                <p th:text="#{about.whatis2}"></p>
+                <p th:text="#{about.whatis3}"></p>
+                <h3 th:text="#{about.whatis6}"></h3>
+                <p th:text="#{about.whatis7}"></p>
+                <h3 th:text="#{about.whatis8}"></h3>
+                <p th:text="#{about.whatis9}"></p>
         </article>
     </section>
+    <h3 th:text="#{about.map}"></h3>
+    <div id="googleMap"></div>
 </div>
-
+<script th:src="@{/JavaScript/map.js}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4FfdNzs9c1qnuHEq-n6WVblN2o4WVH8I&callback=myMap"></script>
+<script th:src="@{/JavaScript/header_highlighter.js}"></script>
 </body>
 </html>

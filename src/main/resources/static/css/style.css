@@ -1,6 +1,5 @@
 p {
     color: white;
-    font-size: 1.5em;
     font-family: Raleway;
 }
 
@@ -10,26 +9,20 @@ h2, h3{
 }
 
 @keyframes bgcolor {
-
     0% {
-        background-color: #45a3e5
-    }
-    25% {
-        background-color: #66bf39
-    }
-    50% {
         background-color: #eb670f
     }
-    75% {
+    33% {
         background-color: #f35
     }
-    100% {
+    66% {
         background-color: #864cbf
     }
 }
 
 .header {
     display: flex;
+    justify-content: space-between;
 }
 
 .join {
@@ -64,8 +57,7 @@ h2, h3{
     align-self: flex-end;
 }
 
-.header-list {
-    flex-grow: 3;
+#header-list {
     list-style-type: none;
     margin: 0.5em;
     padding: 0;
@@ -137,13 +129,11 @@ li a:hover {
 }
 
 .brd {
-    border: 4px black;
-    margin: auto;
     border-radius: 5px;
     padding: 40px;
-    border-style: inset;
+    border: 4px inset black;
     width: 50%;
-    margin-top: 19px;
+    margin: 19px auto auto;
 }
 
 .column-left {
@@ -154,5 +144,8 @@ li a:hover {
     float: right;
 }
 
-
+#googleMap {
+    width:100%;
+    height:400px;
+}
 
