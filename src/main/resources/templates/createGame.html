@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<!--SEE HTML KLASS ON KÜSIMUSTE LOOMISE JAOKS (SIIA LEHELE SAAB AINULT SIIS KUI USER SISSE LOGITUD)-->
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>QuestionMark</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+
+
+    <style type="text/css">
+
+
+        .grid-item {
+            font-size: 30px;
+            text-align: center;
+            display: inline-block;
+            margin: 10px;
+            width: 100%;
+        }
+
+        .input_values {
+            height: 4cm;
+            width: 40%;
+            color: white;
+            text-align: center;
+            background: #ff4363;
+            border: 2px solid #ff4363;
+            border-radius: 5px;
+            text-wrap: normal;
+            font-size: 60px;
+        }
+
+        .tabs > input:checked + label {
+            color: #ffffff;
+            border-bottom: 1px solid #ff3355;
+            background: #ff3355;
+        }
+
+        .tabs {
+            width: 100%;
+            padding: 0px;
+            margin: 0 auto;
+        }
+
+        .tabs > input {
+            display: none;
+        }
+
+        .tabs > div {
+            display: none;
+            padding: 30px;
+            border: 1px solid #000000;
+        }
+
+        .tabs > label {
+            display: inline-block;
+            padding: 7px;
+            margin: 0 -5px -1px 0;
+            text-align: center;
+            color: #ffffff;
+            background: blue;
+            cursor: pointer;
+            background-color: #ff3355;
+
+        }
+
+        .questionTitle {
+            size: 80px;
+            height: 1.5cm;
+            width: 100%;
+            color: white;
+            text-align: center;
+            background: #ff4363;
+            border: 2px solid #ff4363;
+            border-radius: 5px;
+            text-wrap: normal;
+            font-size: 60px;
+
+        }
+
+        .numeration {
+            size: 5px;
+            color: white;
+            margin: 10px;
+
+        }
+
+        .button_finish {
+            height: 1cm;
+            width: 10%;
+            justify-content: space-around;
+            align-items: right;
+            border: 2px solid #ff4363;
+            background: #ff4363;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        #tab_1:checked ~ #txt_1,
+        #tab_2:checked ~ #txt_2,
+        #tab_3:checked ~ #txt_3,
+        #tab_4:checked ~ #txt_4,
+        #tab_5:checked ~ #txt_5 {
+            display: block;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- Päis -->
+<div class="header">
+    <h2>QuestionMark</h2>
+    <ul class="header-list">
+        <li><a th:href="@{/index}">Join Game</a></li>
+        <li><a th:href="@{/login}">Log in</a></li>
+        <li><a th:href="@{/register}">Register</a></li>
+        <li><a th:href="@{/aboutus}">About Us</a></li>
+    </ul>
+</div>
+
+<!-- Sisu -->
+<div class="tabs">
+    <input type="radio" name="inset" value="" id="tab_1" checked>
+    <label for="tab_1">Question 1</label>
+
+    <input type="radio" name="inset" value="" id="tab_2">
+    <label for="tab_2">Question 2</label>
+
+    <input type="radio" name="inset" value="" id="tab_3">
+    <label for="tab_3">Question 3</label>
+
+    <input type="radio" name="inset" value="" id="tab_4">
+    <label for="tab_4">Question 4</label>
+
+    <input type="radio" name="inset" value="" id="tab_5">
+    <label for="tab_5">Question 5</label>
+
+
+    <div id="txt_1">
+        <form th:action="@{/create}" th:object="${createGameForm}" method="POST">
+            <input class="questionTitle" type="text" th:field="*{question1}" required><br>
+            <div class="grid2x2">
+                <div class="grid-item">
+                    <label class="numeration">A</label>
+                    <input type="checkbox" id="correct_A" name="correct_A" value="A">
+                    <input class="input_values" id="answerA_1" value="Answer 1... " th:field="*{answer11}" required>
+
+                    <label class="numeration">B</label>
+                    <input type="checkbox" id="correct_B" name="correct_B" value="C">
+                    <input class="input_values" id="answerB_1" value="Answer 2... " th:field="*{answer12}" required>
+                </div>
+
+                <div class="grid-item">
+
+                    <label class="numeration">C</label>
+                    <input type="checkbox" id="correct_C" name="correct_C" value="C">
+                    <input class="input_values" id="answerC_1" value="Answer 3... " th:field="*{answer13}" required>
+
+                    <label class="numeration">D</label>
+                    <input type="checkbox" id="correct_D" name="correct_D" value="D">
+                    <input class="input_values" id="answerD_1" value="Answer 4... " th:field="*{answer14}" required>
+
+                </div>
+            </div>
+            <input value="Game Pin" th:field="*{gamePinCode}" required>
+            <input type="submit" class="button_finish" value="Save"/>
+            <form/>
+
+    </div>
+
+    <div id="txt_2">
+        <form th:action="@{/create}" th:object="${createGameForm}" method="POST">
+            <input class="questionTitle" type="text" th:field="*{question2}"><br>
+            <div class="grid2x2">
+                <div class="grid-item">
+                    <label class="numeration">A</label>
+                    <input type="checkbox" value="A" th:field="*{answer21isTrue}">
+                    <input class="input_values" value="Answer 1... " th:field="*{answer21}">
+
+                    <label class="numeration">B</label>
+                    <input type="checkbox" value="C" th:field="*{answer22isTrue}">
+                    <input class="input_values" value="Answer 2... " th:field="*{answer22}">
+                </div>
+                <div class="grid-item">
+                    <label class="numeration">C</label>
+                    <input type="checkbox" value="C" th:field="*{answer23isTrue}">
+                    <input class="input_values" value="Answer 3... " th:field="*{answer23}">
+
+                    <label class="numeration">D</label>
+                    <input type="checkbox" value="D" th:field="*{answer24isTrue}">
+                    <input class="input_values" value="Answer 4... " th:field="*{answer24}">
+
+                </div>
+            </div>
+            <input type="submit" class="button_finish" value="Save"/>
+            <form/>
+
+    </div>
+    <div id="txt_3">
+        <form th:action="@{/create}" th:object="${createGameForm}" method="POST">
+            <input class="questionTitle" type="text" th:field="*{question3}"><br>
+            <div class="grid2x2">
+                <div class="grid-item">
+                    <label class="numeration">A</label>
+                    <input type="checkbox" value="A" th:field="*{answer31isTrue}">
+                    <input class="input_values" value="Answer 1... " th:field="*{answer31}">
+
+                    <label class="numeration">B</label>
+                    <input type="checkbox" value="C" th:field="*{answer32isTrue}">
+                    <input class="input_values" value="Answer 2... " th:field="*{answer32}">
+                </div>
+                <div class="grid-item">
+                    <label class="numeration">C</label>
+                    <input type="checkbox" value="C" th:field="*{answer33isTrue}">
+                    <input class="input_values" value="Answer 3... " th:field="*{answer33}">
+
+                    <label class="numeration">D</label>
+                    <input type="checkbox" value="D" th:field="*{answer34isTrue}">
+                    <input class="input_values" value="Answer 4... " th:field="*{answer34}">
+
+                </div>
+            </div>
+            <form/>
+    </div>
+    <div id="txt_4">
+        <form th:action="@{/create}" th:object="${createGameForm}" method="POST">
+            <input class="questionTitle" type="text" th:field="*{question4}"><br>
+            <div class="grid2x2">
+                <div class="grid-item">
+                    <label class="numeration">A</label>
+                    <input type="checkbox" value="A" th:field="*{answer41isTrue}">
+                    <input class="input_values" value="Answer 1... " th:field="*{answer41}">
+
+                    <label class="numeration">B</label>
+                    <input type="checkbox" value="C" th:field="*{answer42isTrue}">
+                    <input class="input_values" value="Answer 2... " th:field="*{answer42}">
+                </div>
+                <div class="grid-item">
+                    <label class="numeration">C</label>
+                    <input type="checkbox" value="C" th:field="*{answer43isTrue}">
+                    <input class="input_values" value="Answer 3... " th:field="*{answer43}">
+
+                    <label class="numeration">D</label>
+                    <input type="checkbox" value="D" th:field="*{answer44isTrue}">
+                    <input class="input_values" value="Answer 4... " th:field="*{answer44}">
+
+                </div>
+            </div>
+            <input type="submit" class="button_finish" value="Save"/>
+            <form/>
+    </div>
+    <div id="txt_5">
+        <form th:action="@{/create}" th:object="${createGameForm}" method="POST">
+            <input class="questionTitle" type="text" th:field="*{question5}"><br>
+            <div class="grid2x2">
+                <div class="grid-item">
+                    <label class="numeration">A</label>
+                    <input type="checkbox" value="A" th:field="*{answer51isTrue}">
+                    <input class="input_values" value="Answer 1... " th:field="*{answer51}">
+
+                    <label class="numeration">B</label>
+                    <input type="checkbox" value="C" th:field="*{answer52isTrue}">
+                    <input class="input_values" value="Answer 2... " th:field="*{answer52}">
+                </div>
+                <div class="grid-item">
+                    <label class="numeration">C</label>
+                    <input type="checkbox" value="C" th:field="*{answer53isTrue}">
+                    <input class="input_values" value="Answer 3... " th:field="*{answer53}">
+
+                    <label class="numeration">D</label>
+                    <input type="checkbox" value="D" th:field="*{answer54isTrue}">
+                    <input class="input_values" value="Answer 4... " th:field="*{answer54}">
+
+                </div>
+            </div>
+            <input type="submit" class="button_finish" value="Save"/>
+            <form/>
+    </div>
+
+</div>
+
+
+</body>
+</html>
