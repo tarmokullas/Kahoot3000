@@ -14,32 +14,25 @@ public class UserService {
 
     //@Override
     public List<User> findAll() {
-        List<User> users = (List<User>) repository.findAll();
-        return users;
+        return repository.findAll();
     }
 
     //@Override
-    public void addUser(User user){
+    public void addUser(User user) {
         repository.save(user);
     }
 
     //@Override
-    public User findUserByUsername(String username){
-        User user = repository.findByUsername(username);
-        return user;
+    public User findUserByUsername(String username) {
+        return repository.findByUsername(username);
     }
 
-    public boolean doPasswordsMatch (String password1, String password2) {
-        if (password1.equals(password2)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+    public boolean doPasswordsMatch(String password1, String password2) {
+        return password1.equals(password2);
     }
 
-    public List<String> getAllUserNames(){
-        List<String> allUserNames = new ArrayList<String>();
+    public List<String> getAllUserNames() {
+        List<String> allUserNames = new ArrayList<>();
 
         for (User user : repository.findAll()) {
             allUserNames.add(user.getUsername());

@@ -88,7 +88,7 @@ public class TestDatabaseController {
         props.setProperty("password", "questionmark");
         props.setProperty("sslmode", "disable");
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
-        //try (Connection connection = DriverManager.getConnection(getAndmebaasString(), props)) {
+            //try (Connection connection = DriverManager.getConnection(getAndmebaasString(), props)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT name, users.username FROM games JOIN users ON creator=users.id");
             while (resultSet.next()) {
