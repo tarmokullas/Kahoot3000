@@ -29,9 +29,9 @@
             <p th:if="${param.passworderror}" th:text="#{register.passwordsDoNotMatch}"></p>
             <p th:if="${param.usernameerror}" th:text="#{register.usernameExists}"></p>
             <form th:action="@{/register}" th:object="${userForm}" method="POST">
-                <p th:text="#{register.username}"><input type="text" th:field="*{username}"/></p>
-                <p th:text="#{register.password}"><input type="password" th:field="*{password}"></p>
-                <p th:text="#{register.repeatpassword}"><input type="password" th:field="*{passwordRepeat}"></p>
+                <p th:text="#{register.username}"></p><input type="text" th:field="*{username}"/>
+                <p th:text="#{register.password}"></p><input type="password" th:field="*{password}">
+                <p th:text="#{register.repeatpassword}"></p><input type="password" th:field="*{passwordRepeat}">
                 <input type="submit" value="Register"/>
             </form>
         </div>
