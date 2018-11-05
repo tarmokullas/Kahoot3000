@@ -12,11 +12,11 @@
 <!-- Päis -->
 <div class="header">
     <h2>QuestionMark</h2>
-    <ul class="header-list">
-        <li><a th:href="@{/index}" th:text="#{header.join}"></a></li>
-        <li><a th:href="@{/login}" th:text="#{header.login}"></a></li>
-        <li><a th:href="@{/register}" th:text="#{header.register}"></a></li>
-        <li><a th:href="@{/aboutus}" th:text="#{header.about}"></a></li>
+    <ul id="header-list">
+        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
+        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
+        <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
+        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
     </ul>
 </div>
 
@@ -37,6 +37,6 @@
         </div>
     </div>
 </div>
-
+<script th:src="@{/JavaScript/header_highlighter.js}"></script>
 </body>
 </html>

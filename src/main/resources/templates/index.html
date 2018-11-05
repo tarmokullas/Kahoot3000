@@ -12,17 +12,16 @@
 <!-- Päis -->
 <div class="header">
     <h2>QuestionMark</h2>
-    <ul class="header-list">
-        <li><a th:href="@{/index}">Join Game</a></li>
-        <li><a th:href="@{/login}">Log in</a></li>
-        <li><a th:href="@{/register}">Register</a></li>
-        <li><a th:href="@{/aboutus}">About Us</a></li>
+    <ul id="header-list">
+        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
+        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
+        <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
+        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
     </ul>
 </div>
 
 <!-- Sisu -->
 <div class="pagecontent">
-
     <div class="Aligner">
         <div class="Aligner-item Aligner-item--top"></div>
         <div class="Aligner-item">
@@ -41,8 +40,7 @@
 
     </div>
     <a th:href="@{/testdatabase}">Testi andmebaasi töötamist siit</a>
-
-</div>
+<script th:src="@{/JavaScript/header_highlighter.js}"></script>
 </div>
 </body>
 </html>

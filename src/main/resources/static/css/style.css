@@ -9,20 +9,13 @@ h2, h3{
 }
 
 @keyframes bgcolor {
-
     0% {
-        background-color: #45a3e5
-    }
-    25% {
-        background-color: #66bf39
-    }
-    50% {
         background-color: #eb670f
     }
-    75% {
+    33% {
         background-color: #f35
     }
-    100% {
+    66% {
         background-color: #864cbf
     }
 }
@@ -64,7 +57,7 @@ h2, h3{
     align-self: flex-end;
 }
 
-.header-list {
+#header-list {
     list-style-type: none;
     margin: 0.5em;
     padding: 0;
