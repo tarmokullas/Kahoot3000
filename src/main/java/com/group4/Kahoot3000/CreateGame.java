@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @Controller
+
 public class CreateGame {
 
     @RequestMapping(value = {"/create"}, method = RequestMethod.GET)
