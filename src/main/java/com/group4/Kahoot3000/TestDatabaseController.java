@@ -133,12 +133,13 @@ public class TestDatabaseController {
                 // Properties file not found!
                 System.out.println("Properties file not found!");
             }
-            andmebaasJBDC = properties.getProperty("andmebaas");
-            return properties.getProperty("andmebaas");
+            andmebaasJBDC = properties.getProperty("spring.datasource.url");
+            return properties.getProperty("spring.datasource.url");
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Property not found!");
+            return "Property not found";
         }
 
-        return andmebaasJBDC;
     }
 }
