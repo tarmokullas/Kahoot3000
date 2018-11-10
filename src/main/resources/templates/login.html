@@ -4,6 +4,22 @@
     <title>Log in</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <meta name="google-signin-client_id"
+          content="185595848954-2nuh8dcrnajbdu9vng9dgr84sd9h4d99.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript">
+        function onSignIn(googleUser) {
+            // window.location.href='success.jsp';
+            var profile = googleUser.getBasicProfile();
+            var imagurl = profile.getImageUrl();
+            var name = profile.getName();
+            var email = profile.getEmail();
+            document.getElementById("myImg").src = imagurl;
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("myP").style.visibility = "hidden";
+            document.getElementById("status").innerHTML = 'Welcome ' + name + '!<a href="create">Create Game</a></p>'
+        }
+    </script>
 </head>
 
 
@@ -21,6 +37,16 @@
 </div>
 
 <!-- Sisu -->
+
+<div class="g-signin2" data-onsuccess="onSignIn" id="myP"></div>
+
+<img id="myImg"><br>
+<p id="name"></p>
+<div id="status">
+</div>
+
+<a href="/" onclick="signOut();">Sign out</a>
+
 <div class="pagecontent">
 
     <div class="row">
