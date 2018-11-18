@@ -1,10 +1,11 @@
-package com.group4.Kahoot3000;
+package com.group4.Kahoot3000.Forms;
 
 public class UserForm {
 
     private String username;
     private String password;
     private String passwordRepeat;
+
 
     public String getUsername() {
         return username;

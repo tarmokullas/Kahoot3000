@@ -1,4 +1,4 @@
-package com.group4.Kahoot3000;
+package com.group4.Kahoot3000.Model;
 
 import com.google.common.hash.Hashing;
 
@@ -9,7 +9,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "users", schema = "public")
-
 public class User {
 
     @Id

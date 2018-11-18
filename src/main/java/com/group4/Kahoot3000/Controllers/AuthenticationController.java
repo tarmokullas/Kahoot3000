@@ -1,14 +1,14 @@
-package com.group4.Kahoot3000;
+package com.group4.Kahoot3000.Controllers;
 
-import com.group4.Kahoot3000.UserService;
-
+import com.group4.Kahoot3000.Model.User;
+import com.group4.Kahoot3000.Forms.*;
+import com.group4.Kahoot3000.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AuthenticationController {
@@ -40,7 +40,7 @@ public class AuthenticationController {
             return "redirect:/register?passworderror";
         }
 
-        if (userService.getAllUserNames().contains(userForm.getUsername())) {
+        if (userService.usernameExists(userForm.getUsername())) {
             return "redirect:/register?usernameerror";
         }
         User userToRegister = new User(userForm.getUsername(), userForm.getPassword());

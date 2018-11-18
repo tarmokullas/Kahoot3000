@@ -1,4 +1,4 @@
-package com.group4.Kahoot3000;
+package com.group4.Kahoot3000.Config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

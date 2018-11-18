@@ -1,5 +1,7 @@
-package com.group4.Kahoot3000;
+package com.group4.Kahoot3000.Controllers;
 
+import com.group4.Kahoot3000.Forms.*;
+import com.group4.Kahoot3000.Database;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,9 +15,9 @@ import java.util.logging.Logger;
 
 @Controller
 
-public class CreateGame {
+public class CreateGameController {
 
-    @RequestMapping(value = {"/create"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/createGame"}, method = RequestMethod.GET)
     public String index(Model model) {
 
         model.addAttribute("createGameForm", new CreateGameForm());
@@ -24,7 +26,7 @@ public class CreateGame {
     }
 
 
-    @RequestMapping(value = {"/create"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/createGame"}, method = RequestMethod.POST)
     public String createGameSubmit(Model model, @ModelAttribute("createGameForm") CreateGameForm createGameForm) {
        // long gamePin = addNewGame(createGameForm);
         addNewValur(createGameForm);

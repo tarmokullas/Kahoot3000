@@ -1,10 +1,9 @@
-package com.group4.Kahoot3000;
+package com.group4.Kahoot3000.Services;
 
+import com.group4.Kahoot3000.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -33,8 +32,11 @@ public class UserService {
     }
 
 
-    public List<String> getAllUserNames() {
-        System.out.println(repository.getAllUserNames());
-        return repository.getAllUserNames();
+    public boolean usernameExists(String username) {
+        if (repository.getUsername(username) != null){
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -1,4 +1,4 @@
-package com.group4.Kahoot3000;
+package com.group4.Kahoot3000.Forms;
 
 public class CreateGameForm {
 

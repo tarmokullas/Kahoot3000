@@ -1,5 +1,7 @@
-package com.group4.Kahoot3000;
+package com.group4.Kahoot3000.Controllers;
 
+import com.group4.Kahoot3000.Model.User;
+import com.group4.Kahoot3000.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
