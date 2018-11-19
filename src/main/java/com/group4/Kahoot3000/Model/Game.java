@@ -7,6 +7,10 @@ import java.util.List;
 @Table(name = "games", schema = "public")
 public class Game {
 
+    //**********************//
+    //     CLASS FIELDS     //
+    //**********************//
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,5 +19,28 @@ public class Game {
     @Column(name = "name")
     private String name;
 
+    //*********************//
+    //     CONSTRUCTOR     //
+    //*********************//
 
+    public Game(Long creator, String name) {
+        this.creator = creator;
+        this.name = name;
+    }
+
+    public Game(String name) {
+        this.name = name;
+    }
+
+    //***************************//
+    //     CETTERS & SETTERS     //
+    //***************************//
+
+    public void setCreator(Long creator) {
+        this.creator = creator;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }

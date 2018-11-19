@@ -11,11 +11,11 @@
 <!-- Päis -->
 <div class="header">
     <h2>QuestionMark</h2>
-    <ul class="header-list">
-        <li><a th:href="@{/index}">Join Game</a></li>
-        <li><a th:href="@{/login}">Log in</a></li>
-        <li><a th:href="@{/register}">Register</a></li>
-        <li><a th:href="@{/aboutus}">About Us</a></li>
+    <ul id="header-list">
+        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
+        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
+        <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
+        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
     </ul>
 </div>
 
@@ -45,8 +45,8 @@
             <form>
                 <input type="text" value="Name"><br>
                 <p>Number of guestions</p>
-                <input type="number"><br>
-                <button><a href="game_creation_page.html">Create</a></button>
+                <input type="number" min="0" max="10"><br>
+                <button><a th:href="@{/create}">Create</a></button>
             </form>
         </div>
     </div>
