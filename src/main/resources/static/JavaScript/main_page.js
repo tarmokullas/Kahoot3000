@@ -1,7 +1,6 @@
 var socket = io();
 
 
-
 socket.on('gameNamesData', function(data){
 
     for(var i = 0; i < Object.keys(data).length; i++){
@@ -34,7 +33,6 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
 
 
 function onSignIn(googleUser) {
