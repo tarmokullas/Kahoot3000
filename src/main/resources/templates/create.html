@@ -32,8 +32,11 @@
 <!--     QUESTIONS FORM     -->
 <!---------------------------->
 
-<div>
+<div id="items">
+
+
     <form th:action="@{/create}" th:object="${createGameForm}" method="POST">
+        <input class="gameName" type="text" th:placeholder="#{create.gameName}" th:field="*{gameName}" required><br><br>
 
         <!---------------->
         <!-- QUESTION 1 -->
@@ -105,115 +108,7 @@
                 </div>
             </div>
         </div>
-
-        <!---------------->
-        <!-- QUESTION 3 -->
-        <!---------------->
-
-        <div>
-
-            <input class="questionTitle" type="text" th:placeholder="#{create.question}" th:field="*{question3}"
-                   required><br>
-
-            <div class="grid2x2">
-                <div class="grid-item">
-                    <label class="numeration">A</label>
-                    <input type="radio" name="radioButtonGroup3" th:field="*{question3trueAnswer}" value="31">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer31}"
-                           required>
-
-                    <label class="numeration">B</label>
-                    <input type="radio" name="radioButtonGroup3" th:field="*{question3trueAnswer}" value="32">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer32}"
-                           required>
-                </div>
-
-                <div class="grid-item">
-                    <label class="numeration">C</label>
-                    <input type="radio" name="radioButtonGroup3" th:field="*{question3trueAnswer}" value="33">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer33}"
-                           required>
-
-                    <label class="numeration">D</label>
-                    <input type="radio" name="radioButtonGroup3" th:field="*{question3trueAnswer}" value="34">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer34}"
-                           required>
-                </div>
-            </div>
-        </div>
-
-        <!---------------->
-        <!-- QUESTION 4 -->
-        <!---------------->
-
-        <div>
-
-            <input class="questionTitle" type="text" th:placeholder="#{create.question}" th:field="*{question4}"
-                   required><br>
-
-            <div class="grid2x2">
-                <div class="grid-item">
-                    <label class="numeration">A</label>
-                    <input type="radio" name="radioButtonGroup4" th:field="*{question4trueAnswer}" value="41">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer41}"
-                           required>
-
-                    <label class="numeration">B</label>
-                    <input type="radio" name="radioButtonGroup4" th:field="*{question4trueAnswer}" value="42">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer42}"
-                           required>
-                </div>
-
-                <div class="grid-item">
-                    <label class="numeration">C</label>
-                    <input type="radio" name="radioButtonGroup4" th:field="*{question4trueAnswer}" value="43">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer43}"
-                           required>
-
-                    <label class="numeration">D</label>
-                    <input type="radio" name="radioButtonGroup4" th:field="*{question4trueAnswer}" value="44">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer44}"
-                           required>
-                </div>
-            </div>
-        </div>
-
-        <!---------------->
-        <!-- QUESTION 5 -->
-        <!---------------->
-
-        <div>
-
-            <input class="questionTitle" type="text" th:placeholder="#{create.question}" th:field="*{question5}"
-                   required><br>
-
-            <div class="grid2x2">
-                <div class="grid-item">
-                    <label class="numeration">A</label>
-                    <input type="radio" name="radioButtonGroup5" th:field="*{question5trueAnswer}" value="51">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer51}"
-                           required>
-
-                    <label class="numeration">B</label>
-                    <input type="radio" name="radioButtonGroup5" th:field="*{question5trueAnswer}" value="52">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer52}"
-                           required>
-                </div>
-
-                <div class="grid-item">
-                    <label class="numeration">C</label>
-                    <input type="radio" name="radioButtonGroup5" th:field="*{question5trueAnswer}" value="53">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer53}"
-                           required>
-
-                    <label class="numeration">D</label>
-                    <input type="radio" name="radioButtonGroup5" th:field="*{question5trueAnswer}" value="54">
-                    <input class="input_values" th:placeholder="#{create.answer}" th:field="*{answer54}"
-                           required>
-                </div>
-            </div>
-        </div>
-        <input type="submit" class="button_finish" th:text="#{create.save}"/>
+        <input type="submit" th:value="#{create.save}"/>
     </form>
 </div>
 
