@@ -66,9 +66,8 @@ public class TestDatabaseController {
     private static String getUserCount() {
         String result = "";
         Properties props = new Properties();
-        props.setProperty("user", "postgres");
-        props.setProperty("password", "questionmark");
-        props.setProperty("sslmode", "disable");
+        props.setProperty("user", "hitensmrrhfrqu");
+        props.setProperty("password", "85fda8baedba2a4b769d0c6b437789e0d9ed9dbb5a7b84b05ac2e9ec60be4b48");
         //try (Connection connection = DriverManager.getConnection("jdbc:postgresql://85.253.216.148:5432/qmark", props)) {
         try (Connection connection = DriverManager.getConnection(getAndmebaasString(), props)) {
             Statement statement = connection.createStatement();

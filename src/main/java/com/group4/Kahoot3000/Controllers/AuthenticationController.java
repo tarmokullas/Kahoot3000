@@ -40,9 +40,9 @@ public class AuthenticationController {
             return "redirect:/register?passworderror";
         }
 
-        if (userService.usernameExists(userForm.getUsername())) {
+        /*if (userService.usernameExists(userForm.getUsername())) {
             return "redirect:/register?usernameerror";
-        }
+        }*/
         User userToRegister = new User(userForm.getUsername(), userForm.getPassword());
         userService.addUser(userToRegister);
 
