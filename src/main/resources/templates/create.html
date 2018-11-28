@@ -11,29 +11,11 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 
-
 <body>
 
-<!-------------------->
-<!--     HEADER     -->
-<!-------------------->
-
-<div class="header">
-    <h2>QuestionMark</h2>
-    <ul id="header-list">
-        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
-        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
-        <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
-        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
-    </ul>
-</div>
-
-<!---------------------------->
-<!--     QUESTIONS FORM     -->
-<!---------------------------->
+<div th:replace="fragments/header.html :: header"></div>
 
 <div id="items">
-
 
     <form th:action="@{/create}" th:object="${createGameForm}" method="POST">
         <input class="gameName" type="text" th:placeholder="#{create.gameName}" th:field="*{gameName}" required><br><br>

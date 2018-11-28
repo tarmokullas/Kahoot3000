@@ -34,6 +34,7 @@ public class User {
         this.salt = Hashing.sha256().hashString(randomSalt, StandardCharsets.UTF_8).toString();
         this.username = username;
         this.password = Hashing.sha256().hashString(password + salt, StandardCharsets.UTF_8).toString();
+        //this.password = password;
     }
 
     public Long getId() {
@@ -48,8 +49,16 @@ public class User {
         return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getSalt() {
         return salt;
+    }
+
+    public String getRoles(){
+        return "USER";
     }
 
     public boolean confirmLogin(String inputPassword) {

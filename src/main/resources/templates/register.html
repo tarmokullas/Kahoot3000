@@ -8,22 +8,9 @@
 
 
 <body>
-
-<!-- Päis -->
-<div class="header">
-    <h2>QuestionMark</h2>
-    <ul id="header-list">
-        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
-        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
-        <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
-        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
-    </ul>
-</div>
-
-<!-- Sisu -->
+<div th:replace="fragments/header.html :: header"></div>
 <div class="pagecontent">
     <div class="">
-        <!-- Login -->
         <div class="">
             <h3 th:text="#{register.haveaccount}"></h3>
             <p th:if="${param.passworderror}" th:text="#{register.passwordsDoNotMatch}"></p>

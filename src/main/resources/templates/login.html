@@ -131,21 +131,7 @@
 
 
 <body>
-
-<!-- Päis -->
-<div class="header">
-    <h2>QuestionMark</h2>
-    <ul id="header-list">
-        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
-        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
-        <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
-        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
-    </ul>
-</div>
-
-<!-- Sisu -->
-
-
+<div th:replace="fragments/header.html :: header"></div>
 <img id="myImg"><br>
 <p id="name"></p>
 <div id="status">
@@ -163,8 +149,8 @@
                 <!-- Login -->
                 <div class="">
                     <h3 th:text="#{login.haveaccount}"></h3>
-                    <p class="login-type" th:if="${param.passworderror}" th:text="#{login.wrongPassword}"></p>
-                    <p class="login-type" th:if="${param.usernameerror}" th:text="#{login.usernameDoesNotExist}"></p>
+                    <p class="login-type" th:if="${param.error}" th:text="#{login.error}"></p>
+                    <p class="login-type" th:if="${param.logout}" th:text="#{login.logout}"></p>
                     <form th:action="@{/login}" th:object="${userForm}" method="POST">
                         <div class="login-section">
                             <label class="login-type" th:text="#{register.username}"></label>
@@ -221,6 +207,5 @@
         data-width="450"
         data-show-faces="true">
 </div>
-<script th:src="@{/JavaScript/header_highlighter.js}"></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<nav class="header" th:fragment="header">
+    <h2>QuestionMark</h2>
+    <ul sec:authorize="isAnonymous()" class="header-list">
+        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
+        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
+        <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
+        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
+    </ul>
+    <ul sec:authorize="isAuthenticated()" class="header-list">
+        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
+        <li><a th:href="@{/userpage}" th:text="#{header.userpage}" class="header-link"></a></li>
+        <form th:action="@{/logout}" method="post"><input class="header-link" type="submit" th:value="#{header.logout}"></classinput></form>
+        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
+    </ul>
+</nav>
+<script th:src="@{/JavaScript/header_highlighter.js}"></script>
+
+</body>
+</html>

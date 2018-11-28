@@ -7,20 +7,7 @@
 </head>
 
 <body>
-
-<!-- Päis -->
-<div class="header">
-    <h2>QuestionMark</h2>
-    <ul id="header-list">
-        <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
-        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
-        <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
-        <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
-    </ul>
-</div>
-
-
-<!-- Sisu -->
+<div th:replace="fragments/header.html :: header"></div>
 <div class="pagecontent">
     <h3>Welcome, %username%!</h3>
     <div class="login-row">
@@ -38,8 +25,6 @@
                 <button><a href="waiting_room.html">Host</a></button>
             </form>
         </div>
-
-        <!-- Register -->
         <div class="column">
             <h4>Create a new game</h4>
             <form>
