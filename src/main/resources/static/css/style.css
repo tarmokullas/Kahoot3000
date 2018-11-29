@@ -114,7 +114,7 @@ h2, h3 {
 
 @keyframes bgcolor {
     0% {
-        background-color: #eb670f
+        background-color: #4864B1
     }
     33% {
         background-color: #f35
@@ -122,6 +122,7 @@ h2, h3 {
     66% {
         background-color: #864cbf
     }
+
 }
 
 .header {
@@ -336,4 +337,55 @@ ul {
     overflow: hidden;
     background-color: #4864B1;
 
+}
+
+a.googleLogin{
+    background-color: #ea4346;
+    border: 1px solid #af2c2a;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    padding: .5rem .65rem;
+    border-radius: .25rem ;
+    font-size: 1em;
+}
+a.googleLogin:hover{
+    background-color: #d6342f;
+}
+
+#customBtn {
+    display: inline-block;
+    background-color: #ea4346;
+    border: 1px solid #af2c2a;
+    color: #fff;
+    width: 153px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    text-align: center;
+}
+#customBtn:hover {
+    cursor: pointer;
+}
+span.label {
+    font-family: serif;
+    font-weight: normal;
+}
+span.icon {
+    background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+}
+span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
 }
