@@ -9,26 +9,35 @@
 
 <body>
 <div th:replace="fragments/header.html :: header"></div>
-<div class="pagecontent">
-    <div class="Aligner">
-        <div class="Aligner-item Aligner-item--top"></div>
-        <div class="Aligner-item">
-            <div class="join">
-                <h3 id="title">Join a game</h3>
-                <form>
-                    <input value="Display Name"><br>
-                </form>
-                <form>
-                    <input value="Game Pin"><br>
-                    <input type="submit" value="Join">
-                </form>
-            </div>
-        </div>
-        <div class="Aligner-item Aligner-item--bottom"></div>
-
+<div class="login">
+    <div class="login-section">
+        <label class="uus-conto " th:text="#{index.joinGame}"></label>
     </div>
-    <a th:href="@{/testdatabase}">Testi andmebaasi töötamist siit</a>
-    <script th:src="@{/JavaScript/header_highlighter.js}"></script>
+    <div class="login-section">
+
+        <label class="login-type" th:text="#{index.gameName}"></label>
+        <div class="login-section-buttons">
+            <input class="input_value_desing" type="text"/>
+        </div>
+    </div>
+    <div class="login-section">
+        <label class="login-type" th:text="#{index.gamePin}"></label>
+        <div class="login-section-buttons">
+            <input class="input_value_desing" type="text"/>
+        </div>
+    </div>
+    <div class="login-section">
+        <div class="login-section-buttons">
+            <input class="register_submit_button" type="submit" value="Join">
+        </div>
+    </div>
 </div>
+</div>
+<div class="Aligner-item Aligner-item--bottom"></div>
+
+</div>
+<script th:src="@{/JavaScript/header_highlighter.js}"></script>
+</div>
+
 </body>
 </html>

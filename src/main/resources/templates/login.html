@@ -3,55 +3,10 @@
 <head>
     <title>Log in</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
     <meta name="google-signin-client_id"
           content="185595848954-2nuh8dcrnajbdu9vng9dgr84sd9h4d99.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-
-    <style type="text/css">
-
-
-        .login {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%)
-        }
-
-        .login2 {
-            border: 1px solid #000000;
-            text-align: left;
-            horiz-align: center;
-            width: 600px;
-
-        }
-
-        .login-section {
-            max-height: 300px;
-            margin: 20px;
-
-        }
-
-        .login-type {
-            vertical-align: middle;
-            horiz-align: left;
-            width: 400px;
-            color: black;
-            text-align: left;
-            margin: 10px;
-
-        }
-
-        .login-section-buttons {
-            float: right;
-            width: 400px;
-
-        }
-
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript">
         function onSignIn(googleUser) {
             // window.location.href='success.jsp';
@@ -63,7 +18,7 @@
             document.getElementById("name").innerHTML = name;
             document.getElementById("myP").style.visibility = "hidden";
             document.getElementById("status").innerHTML = 'Welcome ' + name + '!<a href="create">Create Game</a></p>'
-            window.location.href = "/create"
+
 
         }
 
@@ -132,80 +87,72 @@
 
 <body>
 <div th:replace="fragments/header.html :: header"></div>
-<img id="myImg"><br>
-<p id="name"></p>
-<div id="status">
-</div>
-
-
-<a href="/" onclick="signOut();">Sign out</a>
 
 <div class="login">
-    <div class="login2">
 
-        <div class="pagecontent">
+    <div class="pagecontent">
 
-            <div class="row">
-                <!-- Login -->
-                <div class="">
-                    <h3 th:text="#{login.haveaccount}"></h3>
+        <div class="row">
+            <!-- Login -->
+            <div class="">
+                <div class="login-section">
+                    <label class="uus-conto" th:text="#{login.haveaccount}"></label>
+                </div>
+                <div class="login-section">
                     <p class="login-type" th:if="${param.error}" th:text="#{login.error}"></p>
                     <p class="login-type" th:if="${param.logout}" th:text="#{login.logout}"></p>
-                    <form th:action="@{/login}" th:object="${userForm}" method="POST">
-                        <div class="login-section">
-                            <label class="login-type" th:text="#{register.username}"></label>
-                            <div class="login-section-buttons">
-
-                                <input type="text" th:field="*{username}"/>
-                            </div>
-                        </div>
-
-                        <div class="login-section">
-
-                            <label class="login-type" th:text="#{register.password}"></label>
-
-                            <div class="login-section-buttons">
-                                <input type="password" th:field="*{password}">
-                                <input type="submit" value="Log in"/>
-                            </div>
-                        </div>
-
-
-                    </form>
                 </div>
+                <form th:action="@{/login}" th:object="${userForm}" method="POST">
+                    <div class="login-section">
+                        <label class="login-type" th:text="#{register.username}"></label>
+                        <div class="login-section-buttons">
+                            <input class="input_value_desing" type="text" th:field="*{username}"/>
+                        </div>
+                    </div>
+
+                    <div class="login-section">
+
+                        <label class="login-type" th:text="#{register.password}"></label>
+
+                        <div class="login-section-buttons">
+                            <input class="input_value_desing" type="password" th:field="*{password}">
+                        </div>
+                    </div>
+                    <div class="login-section">
+                        <label class="login-type"></label>
+                        <div class="login-section-buttons">
+                            <input class="register_submit_button" type="submit" value="Log in"/>
+                        </div>
+                    </div>
+
+
+                </form>
             </div>
         </div>
     </div>
-    <div class="login2">
 
-        <div class="login-section">
-            <label class="login-type">FaceBook</label>
+    <div class="login-section">
+        <label class="login-type">FaceBook</label>
 
-            <div class="login-section-buttons">
+        <div class="login-section-buttons">
 
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-                </fb:login-button>
+            <div class="loginBtn loginBtn--facebook">
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
             </div>
         </div>
     </div>
-    <div class="login2">
 
-        <div class="login-section">
-            <label class="login-type">Google Gmail</label>
+    <div class="login-section">
+        <label class="login-type">Google Gmail</label>
 
-            <div class="login-section-buttons">
-                <div class="g-signin2" data-onsuccess="onSignIn" id="myP"></div>
+        <div class="login-section-buttons">
+            <div class="loginBtn loginBtn--google">
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
             </div>
-
         </div>
+
     </div>
 </div>
 
-<div
-        class="fb-like"
-        data-share="true"
-        data-width="450"
-        data-show-faces="true">
-</div>
 </body>
 </html>

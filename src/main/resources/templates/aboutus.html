@@ -3,27 +3,31 @@
 <head>
     <title>About us</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
-   </head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
 <body>
 <div th:replace="fragments/header.html :: header"></div>
-<div class="pagecontent">
-    <section>
-        <article>
-                <h3 th:text="#{about.whatis1}"></h3>
-                <p th:text="#{about.whatis2}"></p>
-                <p th:text="#{about.whatis3}"></p>
-                <h3 th:text="#{about.whatis6}"></h3>
-                <p th:text="#{about.whatis7}"></p>
-                <h3 th:text="#{about.whatis8}"></h3>
-                <p th:text="#{about.whatis9}"></p>
-        </article>
-    </section>
+<div class="main_box_aboutUs">
+    <div class="small_bax_aboutUs">
+        <h3 th:text="#{about.whatis1}"></h3>
+        <p th:text="#{about.whatis2}"></p>
+        <p th:text="#{about.whatis3}"></p>
+    </div>
+    <div class="small_bax_aboutUs">
+        <h3 th:text="#{about.whatis6}"></h3>
+        <p th:text="#{about.whatis7}"></p>
+    </div>
+    <div class="small_bax_aboutUs">
+        <h3 th:text="#{about.whatis8}"></h3>
+        <p th:text="#{about.whatis9}"></p>
+    </div>
     <h3 th:text="#{about.map}"></h3>
     <div id="googleMap"></div>
 </div>
 <script th:src="@{/JavaScript/map.js}"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4FfdNzs9c1qnuHEq-n6WVblN2o4WVH8I&callback=myMap"></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4FfdNzs9c1qnuHEq-n6WVblN2o4WVH8I&callback=myMap"></script>
 <script th:src="@{/JavaScript/header_highlighter.js}"></script>
 </body>
 </html>

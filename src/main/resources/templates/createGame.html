@@ -11,6 +11,17 @@
           content="98722277799-94rtimab9cvdu8e2lgam273bvkgtmq06.apps.googleusercontent.com">
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 
+    <script type="text/javascript">
+            var profile = googleUser.getBasicProfile();
+            var imagurl = profile.getImageUrl();
+            var name = profile.getName();
+            var email = profile.getEmail();
+            document.getElementById("myImg").src = imagurl;
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("myP").style.visibility = "hidden";
+
+
+        </script>
 
     <style type="text/css">
 
@@ -286,6 +297,11 @@
             </form>
     </div>
 
+</div>
+
+<img id="myImg"><br>
+<p id="name"></p>
+<div id="status">
 </div>
 
 

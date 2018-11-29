@@ -1,29 +1,66 @@
 <!DOCTYPE html>
+
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>Register</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 
 <body>
 <div th:replace="fragments/header.html :: header"></div>
-<div class="pagecontent">
+
+<div class="login">
+
     <div class="">
-        <div class="">
-            <h3 th:text="#{register.haveaccount}"></h3>
+
+        <div class="login-section">
+
+            <label class="uus-conto" th:text="#{register.haveaccount}"></label>
+        </div>
+        <div class="login-section">
+
             <p th:if="${param.passworderror}" th:text="#{register.passwordsDoNotMatch}"></p>
             <p th:if="${param.usernameerror}" th:text="#{register.usernameExists}"></p>
-            <form th:action="@{/register}" th:object="${userForm}" method="POST">
-                <p th:text="#{register.username}"></p><input type="text" th:field="*{username}"/>
-                <p th:text="#{register.password}"></p><input type="password" th:field="*{password}">
-                <p th:text="#{register.repeatpassword}"></p><input type="password" th:field="*{passwordRepeat}">
-                <input type="submit" value="Register"/>
-            </form>
         </div>
+        <form th:action="@{/register}" th:object="${userForm}" method="POST">
+
+            <div class="login-section">
+
+                <label class="login-type" th:text="#{register.username}"></label>
+                <div class="login-section-buttons">
+                    <input class="input_value_desing" type="text" th:field="*{username}"/>
+                </div>
+            </div>
+
+            <div class="login-section">
+                <label class="login-type" th:text="#{register.password}"></label>
+                <div class="login-section-buttons">
+                    <input class="input_value_desing" type="password" th:field="*{password}">
+                </div>
+            </div>
+            <div class="login-section">
+                <label class="login-type" th:text="#{register.repeatpassword}"></label>
+                <div class="login-section-buttons">
+                    <input class="input_value_desing" type="password" th:field="*{passwordRepeat}">
+                </div>
+            </div>
+            <div class="login-section">
+                <div class="login-section-buttons">
+
+                    <input th:class="register_submit_button" class="" type="submit" value="Register"/>
+                </div>
+            </div>
+        </form>
+
     </div>
+
 </div>
+
+
 <script th:src="@{/JavaScript/header_highlighter.js}"></script>
+
 </body>
+
 </html>
