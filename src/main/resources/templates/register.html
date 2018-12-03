@@ -30,26 +30,26 @@
 
                 <label class="login-type" th:text="#{register.username}"></label>
                 <div class="login-section-buttons">
-                    <input class="input_value_design" type="text" th:field="*{username}"/>
+                    <input class="input_value_design" type="text" th:field="*{username}" id="registerUsername">
                 </div>
             </div>
 
             <div class="login-section">
                 <label class="login-type" th:text="#{register.password}"></label>
                 <div class="login-section-buttons">
-                    <input class="input_value_design" type="password" th:field="*{password}">
+                    <input class="input_value_design" type="password" th:field="*{password}" id="registerPassword1">
                 </div>
             </div>
             <div class="login-section">
                 <label class="login-type" th:text="#{register.repeatpassword}"></label>
                 <div class="login-section-buttons">
-                    <input class="input_value_design" type="password" th:field="*{passwordRepeat}">
+                    <input class="input_value_design" type="password" th:field="*{passwordRepeat}" id="registerPassword2">
                 </div>
             </div>
             <div class="login-section">
                 <div class="login-section-buttons">
 
-                    <input th:class="register_submit_button" class="" type="submit" value="Register"/>
+                    <input th:class="register_submit_button" class="" type="submit" value="Register" id="registerSubmit"/>
                 </div>
             </div>
         </form>

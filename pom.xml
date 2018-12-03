@@ -154,9 +154,21 @@
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity4</artifactId>
         </dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava-testlib</artifactId>
+            <version>27.0-jre</version>
+            <scope>test</scope>
+        </dependency>
 
-	<build>
+    </dependencies>
+
+    <build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

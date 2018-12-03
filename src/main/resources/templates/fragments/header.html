@@ -10,18 +10,16 @@
     <h2>QuestionMark</h2>
     <ul sec:authorize="isAnonymous()">
         <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
-        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link"></a></li>
+        <li><a th:href="@{/login}" th:text="#{header.login}" class="header-link" id="login"></a></li>
         <li><a th:href="@{/register}" th:text="#{header.register}" class="header-link"></a></li>
         <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
     </ul>
     <ul sec:authorize="isAuthenticated()">
         <li><a th:href="@{/}" th:text="#{header.join}" class="header-link"></a></li>
-        <li><a th:href="@{/userpage}" th:text="#{header.userpage}" class="header-link"></a></li>
+        <li><a th:href="@{/userpage}" th:text="#{header.userpage}" class="header-link" id="userPage"></a></li>
         <li><a th:href="@{/aboutus}" th:text="#{header.about}" class="header-link"></a></li>
-        <li><a th:href="@{/logout}" th:text="#{header.logout}" class="header-link"></a></li>
+        <li><a th:href="@{/logout}" th:text="#{header.logout}" class="header-link" id="logout"></a></li>
     </ul>
 </nav>
-<script th:src="@{/JavaScript/header_highlighter.js}"></script>
-
 </body>
 </html>
