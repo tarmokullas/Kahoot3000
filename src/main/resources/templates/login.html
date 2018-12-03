@@ -6,7 +6,7 @@
     <meta name="google-signin-client_id"
           content="185595848954-2nuh8dcrnajbdu9vng9dgr84sd9h4d99.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/api:client.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 
 </head>
 
@@ -22,7 +22,7 @@
             <!-- Login -->
             <div class="">
                 <div class="login-section">
-                    <label class="uus-conto" th:text="#{login.haveaccount}"></label>
+                    <label class="new-account" th:text="#{login.haveaccount}"></label>
                 </div>
                 <div class="login-section">
                     <p class="login-type" th:if="${param.error}" th:text="#{login.error}"></p>
@@ -32,7 +32,7 @@
                     <div class="login-section">
                         <label class="login-type" th:text="#{register.username}"></label>
                         <div class="login-section-buttons">
-                            <input class="input_value_desing" type="text" th:field="*{username}"/>
+                            <input class="input_value_design" type="text" th:field="*{username}"/>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@
                         <label class="login-type" th:text="#{register.password}"></label>
 
                         <div class="login-section-buttons">
-                            <input class="input_value_desing" type="password" th:field="*{password}">
+                            <input class="input_value_design" type="password" th:field="*{password}">
                         </div>
                     </div>
                     <div class="login-section">

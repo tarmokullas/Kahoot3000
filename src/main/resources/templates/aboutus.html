@@ -3,21 +3,21 @@
 <head>
     <title>About us</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 <body>
 <div th:replace="fragments/header.html :: header"></div>
-<div class="main_box_aboutUs">
-    <div class="small_bax_aboutUs">
+<div class="about-us">
+    <div>
         <h3 th:text="#{about.whatis1}"></h3>
         <p th:text="#{about.whatis2}"></p>
         <p th:text="#{about.whatis3}"></p>
     </div>
-    <div class="small_bax_aboutUs">
+    <div>
         <h3 th:text="#{about.whatis6}"></h3>
         <p th:text="#{about.whatis7}"></p>
     </div>
-    <div class="small_bax_aboutUs">
+    <div>
         <h3 th:text="#{about.whatis8}"></h3>
         <p th:text="#{about.whatis9}"></p>
     </div>

@@ -5,7 +5,7 @@
 <head>
     <title>Register</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 
         <div class="login-section">
 
-            <label class="uus-conto" th:text="#{register.haveaccount}"></label>
+            <label class="new-account" th:text="#{register.haveaccount}"></label>
         </div>
         <div class="login-section">
 
@@ -30,20 +30,20 @@
 
                 <label class="login-type" th:text="#{register.username}"></label>
                 <div class="login-section-buttons">
-                    <input class="input_value_desing" type="text" th:field="*{username}"/>
+                    <input class="input_value_design" type="text" th:field="*{username}"/>
                 </div>
             </div>
 
             <div class="login-section">
                 <label class="login-type" th:text="#{register.password}"></label>
                 <div class="login-section-buttons">
-                    <input class="input_value_desing" type="password" th:field="*{password}">
+                    <input class="input_value_design" type="password" th:field="*{password}">
                 </div>
             </div>
             <div class="login-section">
                 <label class="login-type" th:text="#{register.repeatpassword}"></label>
                 <div class="login-section-buttons">
-                    <input class="input_value_desing" type="password" th:field="*{passwordRepeat}">
+                    <input class="input_value_design" type="password" th:field="*{passwordRepeat}">
                 </div>
             </div>
             <div class="login-section">
