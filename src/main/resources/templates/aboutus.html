@@ -4,6 +4,9 @@
     <title>About us</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+
 </head>
 <body>
 <div th:replace="fragments/header.html :: header"></div>
@@ -21,11 +24,38 @@
         <h3 th:text="#{about.whatis8}"></h3>
         <p th:text="#{about.whatis9}"></p>
     </div>
+
+    <div>
+        <h3 th:text="#{aboutus.userdatatitle}"></h3>
+
+        <p th:text="#{aboutus.userIp}"></p><span id="ip"></span>
+
+        <p th:text="#{aboutus.hostname}"></p><span id="hostname"></span>
+
+        <p th:text="#{aboutus.country_name}"></p><span id="country_name"></span>
+
+        <p th:text="#{aboutus.region}"></p><span id="region"></span>
+
+    </div>
+
+
+    <script type="text/javascript">
+
+        $.getJSON('https://json.geoiplookup.io/api?callback=?', function (data) {
+            console.log(JSON.stringify(data, null, 2));
+            $("#ip").text(data.ip);
+            $("#country_name").text(data.country_name);
+            $("#region").text(data.region);
+            $("#hostname").text(data.hostname);
+        });
+
+
+    </script>
+
     <h3 th:text="#{about.map}"></h3>
     <div id="googleMap"></div>
 </div>
 <script th:src="@{/JavaScript/map.js}"></script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4FfdNzs9c1qnuHEq-n6WVblN2o4WVH8I&callback=myMap"></script>
 </body>
